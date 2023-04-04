@@ -21,12 +21,12 @@ jobs:
         run: yarn lint
       - name: Build
         run: yarn build
-      - name: Deploy to Staging server
-        uses: easingthemes/ssh-deploy@main
       - name: Copy files to standalone build
         run: |
           cp -r public .next/standalone
           cp -r .next/static .next/standalone/.next/static
+      - name: Deploy to Staging server
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i"
