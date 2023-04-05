@@ -35,10 +35,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          # EXCLUDE: "/dist/, /node_modules/"
           SCRIPT_BEFORE: |
             mkdir -p ${{ secrets.REMOTE_TARGET }}
           SCRIPT_AFTER: |
-            whoami
-            ls -al
-            echo $RSYNC_STDOUT
+            docker compose -f ${{ secrets.REMOTE_TARGET }}/docker-compose.yml up -d
