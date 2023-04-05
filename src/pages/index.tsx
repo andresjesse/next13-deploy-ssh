@@ -26,7 +26,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              By{" Hey!"}
+              By{" Hey There!"}
               <Image
                 src="/vercel.svg"
                 alt="Vercel Logo"

@@ -25,7 +25,7 @@ jobs:
         run: |
           cp -r public .next/standalone
           cp -r .next/static .next/standalone/.next/static
-          cp docker-compose.yml .next/standalone
+          cp .deploy/docker-compose.yml .next/standalone
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@main
         env:
