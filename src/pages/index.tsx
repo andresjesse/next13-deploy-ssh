@@ -132,7 +132,7 @@ export const getServerSideProps: GetServerSideProps<{ data: Data }> = async (
   context
 ) => {
   const data: Data = {
-    user: "Fulano " + Math.random(),
+    user: "Ciclano " + Math.random(),
   };
 
   return {
