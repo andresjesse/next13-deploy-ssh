@@ -12,3 +12,4 @@ services:
     working_dir: /app
     command: >
       node server.js
+    restart: always
