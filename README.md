@@ -21,3 +21,13 @@ Open your repository Settings >> Secrets and Variables >> Actions >> Tab Variabl
 `REMOTE_USER`: your host deployer username (e.g. deployer)
 
 `REMOTE_TARGET`: destination folder in host (e.g. /home/deployer/apps/myapp)
+
+## Example config for nginx
+
+There's an example nginx file in `.deploy` folder. Make sure to update servername, then add it to nginx sites-enabled:
+
+`sudo nano /etc/nginx/sites-enabled/your_servername.conf`
+
+`sudo nginx -t` to check your config;
+
+`sudo service nginx reload`
