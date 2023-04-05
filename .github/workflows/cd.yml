@@ -39,3 +39,4 @@ jobs:
             mkdir -p ${{ secrets.REMOTE_TARGET }}
           SCRIPT_AFTER: |
             docker compose -f ${{ secrets.REMOTE_TARGET }}/docker-compose.yml up -d
+            docker compose -f ${{ secrets.REMOTE_TARGET }}/docker-compose.yml restart
